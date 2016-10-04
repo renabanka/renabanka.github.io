@@ -48,7 +48,7 @@ var questionList = [
 
 var maps = [
 	//[0]
-	"images/Map2Y.png",
+	"images/Map2.png",
 	//[1]
 	"images/Map3.png",
 	//[2]
