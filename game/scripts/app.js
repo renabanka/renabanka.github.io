@@ -284,7 +284,7 @@ function makeSucculentLevel3 () {
   $(".game-container").append(succulentParadise5);
   
 
-  var xPos = getRandomInt(0, 700);
+  var xPos = getRandomInt(0, 480);
   succulentParadise5.css("left", xPos + "px");
   succulentParadise5.css("top", "30px");
 
