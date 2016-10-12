@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Garden Fall</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+
+	<img src="images/background.jpg" id="background">
+<!-- 	<img src="images/BORDER-01.png" id="background2"> -->
+
+		<div class="instructions">
+	   		<h2>Urban Garden Catch</h2>
+	   			<p><strong>Objective:</strong> Catch as many flowers as you can to advance to the next level. Discover new flowers as you advance, but try to keep up because the flowers fall faster!</p>
+	   			<p><strong>Levels:</strong> There are a total of 5 levels. Get through all the levels to obtain all the flowers!
+	   			</p>
+	   		<button class="start-game">Start game</button>
+	 	</div>
+
+		<div class='container'>
+			<img src="images/Urban Garden.png" class="title">
+
+			<div class='scoreboard'>
+				<br>
+				<br>
+				<br>
+				<br>
+
+				<h2 class='time'>Timer:</h2>
+					<p class='Timer'>0</p>	
+
+				<br>
+				<br>
+
+				<h2 class='points'>Points:</h2>
+					<p id='point-value'>0</p>
+
+				<br>
+				<br>
+
+				<h2 class='level'>Level:</h2>
+					<p id="level-value">1</p>
+				
+				<br>
+				<br>
+			</div>
+	
+			<div class="game-container">
+			</div>
+
+		</div>
+
+		<div class="results">
+   			<h2>Congratulations! You completed your Garden!</h2>
+   				<p>It took you <span id="timerResults" style="color:purple; font-weight: bold"> </span> seconds, and you collected <span id="pointsResults" style="color: purple; font-weight: bold"> </span> flowers!</p>
+<!--    			<button class="restart">Play again!</button> -->
+   			<input id='buttons' type="button" value="Play again!" onClick="window.location.reload()">
+ 		</div>
+
+ 		<div class="gameover">
+   			<h2>Sorry! You let too many flowers fall!</h2>
+   			<input id='buttons' type="button" value="Try again!" onClick="window.location.reload()">
+ 		</div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/level2app.js"></script>
+
+</body>
+</html>
