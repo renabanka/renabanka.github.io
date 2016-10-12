@@ -167,7 +167,7 @@ function displayResults() {
 function makeSucculent() {
   //add succulents to game container
   var succulentParadise = $("<img class='paradise'>");
-  succulentParadise.prop("src", "images/_0012_Succulent-Paradise.png");
+  succulentParadise.prop("src", "images/0012.png");
   succulents.push(succulentParadise);
   $(".game-container").append(succulentParadise);
 
@@ -201,7 +201,7 @@ function makeSucculent() {
 
 function makeSucculentLevel2 () {
   var succulentParadise2 = $("<img class='paradise'>");
-  succulentParadise2.prop("src", "images/_0028_Succulent-Paradise.png");
+  succulentParadise2.prop("src", "images/0028.png");
   $(".game-container").append(succulentParadise2);
   
   var xPos = getRandomInt(0, 480);
@@ -227,7 +227,7 @@ function makeSucculentLevel2 () {
 
 function makeSucculentLevel3 () {
   var succulentParadise3 = $("<img class='paradise'>");
-  succulentParadise3.prop("src", "images/_0017_Succulent-Paradise.png");
+  succulentParadise3.prop("src", "images/0017.png");
   $(".game-container").append(succulentParadise3);
   
 
@@ -255,7 +255,7 @@ function makeSucculentLevel3 () {
 
   function makeSucculentLevel4 () {
   var succulentParadise4 = $("<img class='paradise'>");
-  succulentParadise4.prop("src", "images/_0015_Succulent-Paradise.png");
+  succulentParadise4.prop("src", "images/0015.png");
   $(".game-container").append(succulentParadise4);
   
 
@@ -280,11 +280,11 @@ function makeSucculentLevel3 () {
 
   function makeSucculentLevel5 () {
   var succulentParadise5 = $("<img class='paradise'>");
-  succulentParadise5.prop("src", "images/_0027_Succulent-Paradise.png");
+  succulentParadise5.prop("src", "images/0027.png");
   $(".game-container").append(succulentParadise5);
   
 
-  var xPos = getRandomInt(0, 480);
+  var xPos = getRandomInt(0, 700);
   succulentParadise5.css("left", xPos + "px");
   succulentParadise5.css("top", "30px");
 
