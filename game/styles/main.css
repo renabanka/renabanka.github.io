@@ -147,7 +147,7 @@ opacity: 0;
 
 @media (max-width: 480px) {
   .game-container {
-  width: 480px;
+  width: 400px;
   height: 550px;
   position: relative;
   overflow: hidden;
