@@ -39,6 +39,7 @@ height: 100%;*/
 
 }
 
+
 .title {
   width: 70%;
   margin: 10px;
@@ -133,15 +134,19 @@ height: 100%;*/
 
 h1 {
   text-align: center; 
+  font-family: 'Cormorant Garamond', serif;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center; 
+  font-family: 'Cormorant Garamond', serif;
+
 }
 
 p {
   text-align: center; 
+  font-family: 'Cormorant Garamond', serif;
 }
 
 
@@ -161,6 +166,28 @@ opacity: 0;
 -webkit-transform: translate(150px, 630px) rotateZ(360deg);
 }
 
+}
+
+@keyframes levels { 
+  level1 {
+ 
+      background: #f00;
+   }
+
+   level2 {
+  
+      background: #ffd630;
+   }
+
+   level3 {
+
+      background: #ffd630;
+   }
+
+   level4 {
+
+      background: #f00;
+   }
 }
 
 
@@ -192,15 +219,14 @@ animation-delay: 0.7s;
 
 
 .box{
-width: 50px;
-height: 50px;
+width: 251px;
+height: 150px;
 position: relative;
-margin: 10px;
 color: white;
-padding: 40px;  
-border: 1px solid #fff;
+/*padding: 40px;  */
+/*border: 1px solid #fff;*/
 background: #895075;
-border-radius: 10px;
+/*border-radius: 10px;*/
 display: block;
 margin-left: auto;
 margin-right: auto;

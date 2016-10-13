@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
    
 
 </head>
@@ -21,8 +22,8 @@
 
 		<div class="instructions">
 	   		<h2>Urban Garden Fall</h2>
-	   			<p><strong>Objective:</strong> Catch as many flowers as you can to advance to the next level. Discover <b>new flowers</b> as you advance, but try to keep up because the flowers fall faster!</p>
-	   			<p><strong>Levels:</strong> There are a total of <b>5</b> levels. Get through all the levels to obtain all the flowers!
+	   			<p><strong>Objective:</strong> Catch as many flowers as you can to advance to the next level. Discover <b>new flowers</b> as you advance, but try to keep up because the flowers fall faster! To catch a flower simply click or tap the flower.</p>
+	   			<p><strong>Levels:</strong> There are a total of <b>5</b> levels. Get through all the levels to see all the flowers!
 	   			</p>
 	   		<button class="start-game">Start game</button>
 	 	</div>
@@ -34,10 +35,9 @@
 				<br>
 				<br>
 				<br>
-				<br>
 
 				<h2 class='time'>Timer:</h2>
-					<p class='Timer'>0</p>	
+					<p id='timer'>0</p>	
 
 				<br>
 				<br>
@@ -52,10 +52,13 @@
 				<br>
 				<br>
 
+				<div class="level-container">
+
 				<h2 class='level'>Level:</h2>
 					<p id="level-value">1</p>
 					
-				
+				</div>
+
 				<br>
 				<br>
 			
@@ -81,7 +84,8 @@
  		</div>
 
  		<div class="gameover">
-   			<h2>Game Over! You let too many flowers fall!</h2>
+   			<h2>Game Over!</h2>
+   			<h6>You let too many flowers fall and only made it to level <span id="levelResults" style="color: purple; font-weight: bold"> </span>.</h6>
    			<input id='buttons' type="button" value="Try again!" onClick="window.location.reload()">
  		</div>
 
@@ -90,7 +94,6 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="scripts/app.js"></script>
-<script src="scripts/level2app.js"></script>
 
 </body>
 </html>
