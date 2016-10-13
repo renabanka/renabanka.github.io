@@ -77,27 +77,27 @@ function startGame() {
  function nextLevel() {
   if (level.levelCounter < 2 && points.pointCounter >= 15) {
     level.addLevel(1);
-    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><br><p>Level:<br> 2</p></div></div>');
+    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 2</p></div></div>');
 
   }
   else if (level.levelCounter < 3 && points.pointCounter >= 30) {
     level.addLevel(1);
-    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><br><p>Level:<br> 3</p></div></div>');
+    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in two"><p>Level:<br> 3</p></div></div>');
  
   } 
   else if (level.levelCounter < 4 && points.pointCounter >= 45) {
     level.addLevel(1);
-    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><br><p>Level:<br> 4</p></div></div>');
+    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 4</p></div></div>');
   } 
 
   else if (level.levelCounter < 5 && points.pointCounter >= 60) {
     level.addLevel(1);
-    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><br><p>Level:<br> 5</p></div></div>');
+    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 5</p></div></div>');
   } 
 
   else if (level.levelCounter < 6 && points.pointCounter >= 75) {
     level.addLevel(1);
-    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><br><p>Level:<br> 6</p></div></div>');
+    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 6</p></div></div>');
   } 
  
   else if (points.pointCounter < 0) {
