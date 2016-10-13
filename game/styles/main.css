@@ -239,12 +239,7 @@ font-size: 3rem;
 
   } 
 
-html, body {
-  overflow-x: hidden;
-}
-body {
-  position: relative
-}
+
 
 
 .box{
