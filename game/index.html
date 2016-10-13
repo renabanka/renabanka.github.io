@@ -14,12 +14,15 @@
 <body>
 
 	<img src="images/background.jpg" id="background">
-<!-- 	<img src="images/BORDER-01.png" id="background2"> -->
+	<img src="images/background2-01.png" id="background2">
+
+		<div id="instructionsBorder">
+		</div>
 
 		<div class="instructions">
-	   		<h2>Urban Garden Catch</h2>
-	   			<p><strong>Objective:</strong> Catch as many flowers as you can to advance to the next level. Discover new flowers as you advance, but try to keep up because the flowers fall faster!</p>
-	   			<p><strong>Levels:</strong> There are a total of 5 levels. Get through all the levels to obtain all the flowers!
+	   		<h2>Urban Garden Fall</h2>
+	   			<p><strong>Objective:</strong> Catch as many flowers as you can to advance to the next level. Discover <b>new flowers</b> as you advance, but try to keep up because the flowers fall faster!</p>
+	   			<p><strong>Levels:</strong> There are a total of <b>5</b> levels. Get through all the levels to obtain all the flowers!
 	   			</p>
 	   		<button class="start-game">Start game</button>
 	 	</div>
@@ -39,21 +42,34 @@
 				<br>
 				<br>
 
+				<div class="points-container">
+
 				<h2 class='points'>Points:</h2>
 					<p id='point-value'>0</p>
+				</div>
+
 
 				<br>
 				<br>
 
 				<h2 class='level'>Level:</h2>
 					<p id="level-value">1</p>
+					
 				
 				<br>
 				<br>
+			
+
 			</div>
 	
 			<div class="game-container">
+
+
 			</div>
+
+
+
+			
 
 		</div>
 
@@ -65,9 +81,11 @@
  		</div>
 
  		<div class="gameover">
-   			<h2>Sorry! You let too many flowers fall!</h2>
+   			<h2>Game Over! You let too many flowers fall!</h2>
    			<input id='buttons' type="button" value="Try again!" onClick="window.location.reload()">
  		</div>
+
+
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>

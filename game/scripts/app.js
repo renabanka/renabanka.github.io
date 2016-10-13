@@ -57,6 +57,7 @@ function startGame() {
   $('.game-container').show();
   $('.scoreboard').show();
   $('.instructions').hide();
+  $('#instructionsBorder').hide();
 
   var num = 8;
     while (num > 0) {
@@ -71,13 +72,20 @@ function startGame() {
 
 
 
+
 //function to check how many points player has collected and increase levels per conditions below
  function nextLevel() {
   if (level.levelCounter < 2 && points.pointCounter >= 15) {
     level.addLevel(1);
+    var levelAnimation = $('<div class="box fade-in one">Level 2!</div>');
+    $(".points-container").append(levelAnimation);
+
   }
   else if (level.levelCounter < 3 && points.pointCounter >= 30) {
     level.addLevel(1);
+    var levelAnimation = $('<div class="box fade-in one">Level 3!</div>');
+    $(".points-container").append(levelAnimation);
+ 
   } 
   else if (level.levelCounter < 4 && points.pointCounter >= 45) {
     level.addLevel(1);
@@ -95,6 +103,7 @@ function startGame() {
     $('.gameover').show();
     $('.game-container').hide();
     $('.scoreboard').hide();
+    $('.title').hide();
    
     }
   else {
@@ -107,23 +116,24 @@ function startGame() {
   if (points.pointCounter < 30 && points.pointCounter > 15) {
     // startLevel2();
     makeSucculentLevel2 ();
+
   }
 
   else if (points.pointCounter < 45 && points.pointCounter > 30) {
-    makeSucculentLevel2 ();
+    // makeSucculentLevel2 ();
     makeSucculentLevel3 ();
   }
 
   else if (points.pointCounter < 60 && points.pointCounter > 45) {
-    makeSucculentLevel2 ();
-    makeSucculentLevel3 ();
+    // makeSucculentLevel2 ();
+    // makeSucculentLevel3 ();
     makeSucculentLevel4 ();
   }
 
   else if (points.pointCounter < 75 && points.pointCounter > 60) {
-    makeSucculentLevel2 ();
-    makeSucculentLevel3 ();
-    makeSucculentLevel4 ();
+    // makeSucculentLevel2 ();
+    // makeSucculentLevel3 ();
+    // makeSucculentLevel4 ();
     makeSucculentLevel5 ();
   }
 
@@ -131,6 +141,7 @@ function startGame() {
     $('.gameover').show();
     $('.game-container').hide();
     $('.scoreboard').hide();
+    $('.title').hide();
   }
 
   else {
@@ -145,22 +156,13 @@ function displayResults() {
     $('#pointsResults').text(points.pointCounter);
     $('.game-container').hide();
     $('.scoreboard').hide();
+    $('.title').hide();
   }
     else {
 
     }
 }
 
-// function gameover() {
-//   if (points.pointCounter < 0) {
-//      $('.gameover').show();
-//     $('.game-container').hide();
-//     $('.scoreboard').hide();
-//   }
-//     else {
-
-//     }
-// }
 
 
 //master function to create succulents, call functions defined above
@@ -175,7 +177,7 @@ function makeSucculent() {
   var speed = getRandomInt(5000, 10000);
   
   //set succulent drops on x-axis referencing getRandomInt function
-  var xPos = getRandomInt(0, 480);
+  var xPos = getRandomInt(0, 400);
   succulentParadise.css("left", xPos + "px");
   succulentParadise.css("top", "-30px");
   
@@ -204,7 +206,7 @@ function makeSucculentLevel2 () {
   succulentParadise2.prop("src", "images/0028.png");
   $(".game-container").append(succulentParadise2);
   
-  var xPos = getRandomInt(0, 480);
+  var xPos = getRandomInt(0, 400);
   succulentParadise2.css("left", xPos + "px");
   succulentParadise2.css("top", "0px");
   
@@ -219,7 +221,7 @@ function makeSucculentLevel2 () {
   function succulentClick() {
   $(this).remove();
   
-  points.addPoint(2);
+  points.addPoint(1);
     }  
     }  
 
@@ -231,7 +233,7 @@ function makeSucculentLevel3 () {
   $(".game-container").append(succulentParadise3);
   
 
-  var xPos = getRandomInt(0, 480);
+  var xPos = getRandomInt(0, 400);
   succulentParadise3.css("left", xPos + "px");
   succulentParadise3.css("top", "10px");
   
@@ -247,7 +249,7 @@ function makeSucculentLevel3 () {
   $(this).remove();
   
 
-  points.addPoint(3);
+  points.addPoint(2);
 
     }  
     }  
@@ -259,7 +261,7 @@ function makeSucculentLevel3 () {
   $(".game-container").append(succulentParadise4);
   
 
-  var xPos = getRandomInt(0, 480);
+  var xPos = getRandomInt(0, 400);
   succulentParadise4.css("left", xPos + "px");
   succulentParadise4.css("top", "20px");
 
@@ -272,7 +274,7 @@ function makeSucculentLevel3 () {
   function succulentClick() {
   $(this).remove();
   
-  points.addPoint(4);
+  points.addPoint(3);
 
     }  
     }  
@@ -284,7 +286,7 @@ function makeSucculentLevel3 () {
   $(".game-container").append(succulentParadise5);
   
 
-  var xPos = getRandomInt(0, 480);
+  var xPos = getRandomInt(0, 400);
   succulentParadise5.css("left", xPos + "px");
   succulentParadise5.css("top", "30px");
 
@@ -296,7 +298,7 @@ function makeSucculentLevel3 () {
   function succulentClick() {
   $(this).remove();
 
-  points.addPoint(5);
+  points.addPoint(3);
 
     }  
     }  
@@ -320,7 +322,7 @@ setInterval(function(event) {
   var topOf = $('.game-container').position().top;
   var height = $('.game-container').height();
   var bottomLine = topOf + height;
-  console.log('tick tock');
+  console.log('found location');
   findLocation(bottomLine);
   newSucculents()
 

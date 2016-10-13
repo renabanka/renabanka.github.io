@@ -1,3 +1,8 @@
+@-ms-viewport{
+  width: device-width;
+}
+
+
 html {
 width: 100%;
 height: 100%;
@@ -26,8 +31,12 @@ overflow: hidden;
 
 #background2 {
   position: absolute;
-  width:1450px;
-  height:900px;
+  width:1438px;
+  height:1063px;
+/*  width: 100%;
+height: 100%;*/
+
+
 }
 
 .title {
@@ -52,15 +61,30 @@ overflow: hidden;
 .instructions {
   position: absolute;
   top: 30%;
-  width: 550px;
-  height: auto;
+  width: 525px;
+  height: 255px;
   background: white;
   text-align: center;
   border-style: solid;
-  border-color: gray; 
+  border-color: white; 
   padding: 30px;
-  left: 28%;
+  left: 29%;
   opacity: .90;
+}
+
+#instructionsBorder {
+  position: absolute;
+  top: 30%;
+  width: 555px;
+  height: 285px;
+  background: clear;
+  text-align: center;
+  border-style: solid;
+  border-color: white; 
+  padding: 30px;
+  left:28%;
+  top:28%;
+  opacity: 1;
 }
 
 .results {
@@ -84,9 +108,10 @@ overflow: hidden;
   background: white;
   text-align: center;
   border-style: solid;
-  border-color: black; 
+  border-color: gray; 
   padding: 30px;
   left: 25%;
+  opacity: .90;
 }
 
 
@@ -120,6 +145,8 @@ p {
 }
 
 
+
+
 @-webkit-keyframes fallingSucculents {
 0% {
 opacity: 1;
@@ -133,14 +160,58 @@ opacity: 1;
 opacity: 0;
 -webkit-transform: translate(150px, 630px) rotateZ(360deg);
 }
+
 }
 
 
 
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+
+
+.box{
+width: 50px;
+height: 50px;
+position: relative;
+margin: 10px;
+color: white;
+padding: 40px;  
+border: 1px solid #fff;
+background: #895075;
+border-radius: 10px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+font-size: 2rem;
+}
+
 
 @media (max-width: 480px) {
   .game-container {
-  width: 500px;
+  width: 400px;
   height: 550px;
   position: relative;
   overflow: hidden;
@@ -161,7 +232,8 @@ opacity: 0;
   background-color: white;
   top: -100px;
   right:80%;
-/*  visibility: hidden; */
+
+
 }
 .paradise {
   width: 75px;
@@ -228,4 +300,21 @@ opacity: 0;
 
  
 }
+
+#instructionsBorder {
+  position: absolute;
+  top: 30%;
+  width: 555px;
+  height: 285px;
+  background: clear;
+  text-align: center;
+  border-style: solid;
+  border-color: white; 
+  padding: 30px;
+  left:28%;
+  top:28%;
+  opacity: 1;
+  visibility: hidden;
+}
+
 }
