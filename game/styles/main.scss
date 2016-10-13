@@ -2,7 +2,6 @@
   width: device-width;
 }
 
-
 html {
 width: 100%;
 height: 100%;
@@ -10,6 +9,26 @@ clip: auto;
 position: absolute;
 overflow: hidden;
 }
+
+
+h1 {
+  text-align: center; 
+  font-family: 'Cormorant Garamond', serif;
+}
+
+h2 {
+  font-size: 4rem;
+  text-align: center; 
+  font-family: 'Cormorant Garamond', serif;
+
+}
+
+p {
+  text-align: center; 
+  font-family: 'Cormorant Garamond', serif;
+}
+
+
 
 .paradise {
   width: 100px;
@@ -38,6 +57,10 @@ height: 100%;*/
 
 
 }
+
+
+
+
 
 .title {
   width: 70%;
@@ -129,20 +152,10 @@ height: 100%;*/
   width: 250px;
   background-color: white;
   opacity: .90; 
+  font-size: 2rem;
 }
 
-h1 {
-  text-align: center; 
-}
 
-h2 {
-  font-size: 3rem;
-  text-align: center; 
-}
-
-p {
-  text-align: center; 
-}
 
 
 
@@ -190,22 +203,27 @@ opacity: 0;
 animation-delay: 0.7s;
 }
 
+.fade-in.two {
+-webkit-animation-delay: 0.9s;
+-moz-animation-delay: 0.9s;
+animation-delay: 0.9s;
+}
+
 
 .box{
-width: 50px;
-height: 50px;
+width: 251px;
+height: 150px;
 position: relative;
-margin: 10px;
 color: white;
-padding: 40px;  
-border: 1px solid #fff;
+/*padding: 40px;  */
+/*border: 1px solid #fff;*/
 background: #895075;
-border-radius: 10px;
+/*border-radius: 10px;*/
 display: block;
 margin-left: auto;
 margin-right: auto;
 text-align:center;
-font-size: 2rem;
+font-size: 3rem;
 }
 
 
@@ -222,6 +240,25 @@ font-size: 2rem;
   top: -650px;
 
   } 
+
+
+
+
+.box{
+width: 100px;
+height: 100px;
+position: relative;
+color: white;
+/*padding: 40px;  */
+/*border: 1px solid #fff;*/
+background: #895075;
+/*border-radius: 10px;*/
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+font-size: 3rem;
+}
 
 .scoreboard {
   margin: 0 auto;
@@ -253,7 +290,7 @@ font-size: 2rem;
   background: white;
   text-align: center;
   border-style: solid;
-  border-color: gray; 
+  border-color: white; 
   opacity: .90;
 }
 
@@ -297,6 +334,7 @@ font-size: 2rem;
   left: 0;
   min-width: 100%;
   height: 550px;
+
 
  
 }

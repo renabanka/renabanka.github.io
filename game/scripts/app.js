@@ -331,12 +331,6 @@ setInterval(function(event) {
 }, 1000);
 
 
-var fixed = document.getElementById('fixed');
 
-fixed.addEventListener('touchmove', function(e) {
-
-        e.preventDefault();
-
-}, false);
 
 
