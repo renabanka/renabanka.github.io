@@ -1,3 +1,5 @@
+$("donotscrollme").on("touchmove", false);
+
 //variable to add or subtract points to the scoreboard. Starts at 0 and increases/decreases depending on function conditions below.
 var points = {
   pointCounter: 0,
