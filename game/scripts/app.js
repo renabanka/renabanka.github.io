@@ -30,7 +30,7 @@ var level = {
 //variable which stores an array of the succulents that have been appended to the page
 var succulents = [];
 
-//timer related variable
+//variable that stores the timestamp when the game is started
 var start = new Date();
 
 //function to get random min and max for succulents location drop and speed drop
@@ -84,7 +84,7 @@ function startGame() {
   }
   else if (level.levelCounter < 3 && points.pointCounter >= 30) {
     level.addLevel(1);
-    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in two"><p>Level:<br> 3</p></div></div>');
+    $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 3</p></div></div>');
  
   } 
   else if (level.levelCounter < 4 && points.pointCounter >= 45) {
@@ -117,26 +117,19 @@ function startGame() {
 //increase of levels 
  function newSucculents() {
   if (points.pointCounter < 30 && points.pointCounter > 15) {
-    // startLevel2();
     makeSucculentLevel2 ();
 
   }
 
   else if (points.pointCounter < 45 && points.pointCounter > 30) {
-    // makeSucculentLevel2 ();
     makeSucculentLevel3 ();
   }
 
   else if (points.pointCounter < 60 && points.pointCounter > 45) {
-    // makeSucculentLevel2 ();
-    // makeSucculentLevel3 ();
     makeSucculentLevel4 ();
   }
 
   else if (points.pointCounter < 75 && points.pointCounter > 60) {
-    // makeSucculentLevel2 ();
-    // makeSucculentLevel3 ();
-    // makeSucculentLevel4 ();
     makeSucculentLevel5 ();
   }
 
@@ -197,7 +190,7 @@ function makeSucculent() {
     points.addPoint(1);
     //check the conditions to display level name
     nextLevel();
-     //check the conditions to create more succulents
+     //check the conditions to create succulents of different levels
     newSucculents();
     //check the conditions to display results
     displayResults();
@@ -333,6 +326,7 @@ setInterval(function(event) {
 }, 1000);
 
 
+//function found online to make it so scrolling on iphone doesnt work
 document.ontouchmove = function (e) {
   e.preventDefault();
 }
