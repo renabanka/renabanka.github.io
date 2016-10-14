@@ -1,6 +1,6 @@
 
 
-//variable to add or subtract points to the scoreboard. Starts at 0 and increases/decreases depending on function conditions below.
+//Variable which stores the score and stores the functions which add or subtract points to the scoreboard. Starts at 0 and increases/decreases depending on function conditions below.
 var points = {
   pointCounter: 0,
   addPoint: function(num) {
@@ -15,9 +15,9 @@ var points = {
     return;
   }
   
-  }
+}
 
-//variable to increase the level on the scoreboard. Starts at Level 1 and increase by 1 depending on nextLevel function conditions below
+//Variable which stores the level and stores the functions to increase the level on the scoreboard. Starts at Level 1 and increase by 1 depending on nextLevel function conditions below
 var level = {
   levelCounter: 1,
   addLevel: function(num) {
@@ -25,21 +25,20 @@ var level = {
     $('#level-value').text(this.levelCounter);
     return;
   }
-};
+}
 
-//variable which stores an array of the succulents that have been appended to the page
+//Variable which stores an array of the succulents that have been appended to the page
 var succulents = [];
 
-//variable that stores the timestamp when the game is started
+//Variable that stores the timestamp when the game is started
 var start = new Date();
 
-//function to get random min and max for succulents location drop and speed drop
+//Function to get random min and max for succulents x-axis drop location
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-//before game starts hide all game elements
+//Before game starts hide all game elements below
 $('#background').hide();
 $('.title').hide();
 $('.game-container').hide();
@@ -47,11 +46,11 @@ $('.scoreboard').hide();
 $('.results').hide();
 $('.gameover').hide();
 
- //event listener to call function after "Start Game" button is clicked
+//Event listener to call function after "Start Game" button is clicked
 $(".start-game").click(startGame);
 
 
-//master function which starts the game
+//Master function which starts the game
 function startGame() {
   $('#background2').hide();
   $('#background').show();
@@ -61,11 +60,13 @@ function startGame() {
   $('.instructions').hide();
   $('#instructionsBorder').hide();
 
+//Loop which releases 8 flowers at a time but continously loops since variable is defined outside
   var num = 8;
     while (num > 0) {
     makeSucculent();
     num--;
 
+//Second Timer Function which runs every second    
     setInterval(function() {
     $('#timer').text(Math.round((new Date - start) / 1000, 0));
     }, 1000);
@@ -73,66 +74,52 @@ function startGame() {
 }
 
 
-
-
-//function to check how many points player has collected and increase levels per conditions below
- function nextLevel() {
+//Function to check how many points player has collected and increase levels per conditions below
+function nextLevel() {
   if (level.levelCounter < 2 && points.pointCounter >= 15) {
     level.addLevel(1);
     $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 2</p></div></div>');
-
   }
   else if (level.levelCounter < 3 && points.pointCounter >= 30) {
     level.addLevel(1);
     $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 3</p></div></div>');
- 
   } 
   else if (level.levelCounter < 4 && points.pointCounter >= 45) {
     level.addLevel(1);
     $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 4</p></div></div>');
   } 
-
   else if (level.levelCounter < 5 && points.pointCounter >= 60) {
     level.addLevel(1);
     $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 5</p></div></div>');
   } 
-
   else if (level.levelCounter < 6 && points.pointCounter >= 75) {
     level.addLevel(1);
     $(".level-container").replaceWith('<div class="level-container"><div class="box fade-in one"><p>Level:<br> 6</p></div></div>');
   } 
- 
   else if (points.pointCounter < 0) {
     $('.gameover').show();
     $('.game-container').hide();
     $('.scoreboard').hide();
     $('.title').hide();
-   
-    }
+  }
   else {
   }
-
 }
 
-//increase of levels 
- function newSucculents() {
+//Function to increase levels 
+function newSucculents() {
   if (points.pointCounter < 30 && points.pointCounter > 15) {
     makeSucculentLevel2 ();
-
   }
-
   else if (points.pointCounter < 45 && points.pointCounter > 30) {
     makeSucculentLevel3 ();
   }
-
   else if (points.pointCounter < 60 && points.pointCounter > 45) {
     makeSucculentLevel4 ();
   }
-
   else if (points.pointCounter < 75 && points.pointCounter > 60) {
     makeSucculentLevel5 ();
   }
-
   else if (points.pointCounter < 0) {
     $('.gameover').show();
     $('.game-container').hide();
@@ -140,12 +127,11 @@ function startGame() {
     $('.title').hide();
     $('#levelResults').text(level.levelCounter);
   }
-
   else {
   }
 }
 
-//function to display results once highest level is met
+//Function to display results once highest level is met
 function displayResults() {
   if (level.levelCounter > 5 && points.pointCounter >=75) {
     $('.results').show();
@@ -155,33 +141,32 @@ function displayResults() {
     $('.scoreboard').hide();
     $('.title').hide();
   }
-    else {
+  else {
 
-    }
+  }
 }
-
-
 
 //master function to create succulents, call functions defined above
 function makeSucculent() {
+
   //add succulents to game container
   var succulentParadise = $("<img class='paradise'>");
   succulentParadise.prop("src", "images/0012.png");
   succulents.push(succulentParadise);
   $(".game-container").append(succulentParadise);
 
-  //set succulent drop speed referencing getRandomInt function
+  //sets succulent drop speed at random since these flowers fall throughout the game
   var speed = getRandomInt(5000, 10000);
-  
+
   //set succulent drops on x-axis referencing getRandomInt function
-  var xPos = getRandomInt(0, 400);
+  var xPos = getRandomInt(0, 500);
   succulentParadise.css("left", xPos + "px");
   succulentParadise.css("top", "-30px");
   
-  //drop succulents in a certain way
+  //drop flowers from top to 630px at speed defined, using the swing animation
   succulentParadise.animate({"top": "630px"}, speed, "swing", makeSucculent);
   
-  //listen to clicks and remove image once clicked by user
+  //listen to clicks and remove flower divs once clicked by user
   succulentParadise.click(succulentClick);
   
   function succulentClick() {
@@ -197,110 +182,91 @@ function makeSucculent() {
   }  
 } 
 
-
+//need to refactor code after assignment to try and create below functions as one constructor
 function makeSucculentLevel2 () {
   var succulentParadise2 = $("<img class='paradise'>");
   succulentParadise2.prop("src", "images/0028.png");
   $(".game-container").append(succulentParadise2);
   
-  var xPos = getRandomInt(0, 400);
+  var xPos = getRandomInt(0, 480);
   succulentParadise2.css("left", xPos + "px");
   succulentParadise2.css("top", "0px");
   
-
-  var speed = getRandomInt(6000, 10000);
-  
+  var speed = 8000;
 
   succulentParadise2.animate({"top": "630px"}, speed, "swing", makeSucculent);
-  
 
   succulentParadise2.click(succulentClick);
+  
   function succulentClick() {
   $(this).remove();
-  
   points.addPoint(1);
-    }  
-    }  
-
-
+  }  
+}  
 
 function makeSucculentLevel3 () {
   var succulentParadise3 = $("<img class='paradise'>");
   succulentParadise3.prop("src", "images/0017.png");
   $(".game-container").append(succulentParadise3);
   
-
-  var xPos = getRandomInt(0, 400);
+  var xPos = getRandomInt(0, 480);
   succulentParadise3.css("left", xPos + "px");
   succulentParadise3.css("top", "10px");
   
-
-  var speed = getRandomInt(7000, 10000);
-  
+  var speed = 7000;
 
   succulentParadise3.animate({"top": "630px"}, speed, "swing", makeSucculent);
-  
 
   succulentParadise3.click(succulentClick);
+  
   function succulentClick() {
   $(this).remove();
-  
-
   points.addPoint(2);
+  }  
+}  
 
-    }  
-    }  
-
-
-  function makeSucculentLevel4 () {
+function makeSucculentLevel4 () {
   var succulentParadise4 = $("<img class='paradise'>");
   succulentParadise4.prop("src", "images/0015.png");
   $(".game-container").append(succulentParadise4);
-  
 
-  var xPos = getRandomInt(0, 400);
+  var xPos = getRandomInt(0, 480);
   succulentParadise4.css("left", xPos + "px");
   succulentParadise4.css("top", "20px");
 
-  var speed = getRandomInt(8500, 10000);
-  
+  var speed = 6000;
 
   succulentParadise4.animate({"top": "630px"}, speed, "swing", makeSucculent);
   
   succulentParadise4.click(succulentClick);
   function succulentClick() {
   $(this).remove();
-  
   points.addPoint(3);
 
-    }  
-    }  
-
+  }  
+}  
 
   function makeSucculentLevel5 () {
   var succulentParadise5 = $("<img class='paradise'>");
   succulentParadise5.prop("src", "images/0027.png");
   $(".game-container").append(succulentParadise5);
-  
 
-  var xPos = getRandomInt(0, 400);
+  var xPos = getRandomInt(0, 480);
   succulentParadise5.css("left", xPos + "px");
   succulentParadise5.css("top", "30px");
 
-  var speed = getRandomInt(9000, 10000);
+  var speed = 5000;
   
   succulentParadise5.animate({"top": "630px"}, speed, "swing", makeSucculent);
   
   succulentParadise5.click(succulentClick);
   function succulentClick() {
   $(this).remove();
+  points.addPoint(5);
+  }  
+}  
 
-  points.addPoint(3);
-
-    }  
-    }  
-
-//function to check the location of the succulents
+//function to check the location of the succulents and if they are below the game container
 function findLocation(bottomLine) {
   for (flow in succulents) {
     var el = succulents[flow];
