@@ -1,4 +1,4 @@
-# [] Project #1: The Game: Urban Garden Fall
+#Project #1: The Game: Urban Garden Fall
 ---
 
 ### Assignment Overview
@@ -126,10 +126,10 @@ When I wireframed my game, I wanted to use Jquery to manipulate the DOM. I desig
 * **Created span ids and pushed final result into this id
 
 ###For replay button:
-* **Used the method: window.location.reload()
+* **Used the method: window.location.reload
 ---
 ###CSS outline
-* **Add a no scroll style for browser and for phone(http://stackoverflow.com/questions/28790889/css-how-to-prevent-scrolling-on-ios-safari)
+* **Added a no scroll style for browser and for phone(http://stackoverflow.com/questions/28790889/css-how-to-prevent-scrolling-on-ios-safari)
 * **Used media queries to try to make the phone adaptive on the iPhone
 * **Added a key frame animation that undergoes 3 states every 20 seconds - rotates the flowers certain degrees and specifies a 2D translation by the vector (not sure I fully understand translate)
 * **Added another key frame that fades the boxes onto the page when the levels change. Fades in with a predefined fade type, changes the opacity and fills the box, and happens within the second
