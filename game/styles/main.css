@@ -199,13 +199,13 @@ font-size: 3rem;
 @media (max-width: 480px) {
   .game-container {
   width: 400px;
-  height: 630px;
+  height: 650px;
   position: relative;
   overflow: hidden;
   float: left;
   background-color: white;
   opacity: .50; 
-  right: 8%;
+  right: 9%;
   top: -700px;
   } 
 
