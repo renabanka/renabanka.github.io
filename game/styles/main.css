@@ -247,7 +247,7 @@ font-size: 3rem;
 }
 
 .instructions {
-  top: 30px;
+  top: 40px;
   right:8%;
   left:8%;
   width: auto;
@@ -260,7 +260,7 @@ font-size: 3rem;
 }
 
 .results {
-  top: 30px;
+  top: 40px;
   right:8%;
   left:8%;
   width: auto;
@@ -272,7 +272,7 @@ font-size: 3rem;
 }
 
 .gameover {
-  top: 30px;
+  top: 40px;
   right:8%;
   left:8%;
   width: auto;
