@@ -247,11 +247,11 @@ font-size: 3rem;
 }
 
 .instructions {
-  top: 20px;
+  top: auto;
   right:8%;
   left:8%;
   width: auto;
-  height: 400px;
+  height: auto;
   background: white;
   text-align: center;
   border-style: solid;
@@ -272,11 +272,11 @@ font-size: 3rem;
 }
 
 .gameover {
-  top: 20px;
+  top: auto;
   right:8%;
   left:8%;
   width: auto;
-  height: 400px;
+  height: auto;
   background: white;
   text-align: center;
   border-style: solid;
