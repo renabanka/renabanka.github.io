@@ -115,8 +115,8 @@ h2 {
   height: auto;
   background: white;
   text-align: center;
-  border-style: solid;
-  border-color: gray; 
+  border: 10px double;
+  border-color: rgba(255,255,255, 0.9);
   padding: 30px;
   left: 25%;
   opacity: .90;
@@ -199,7 +199,7 @@ font-size: 3rem;
 @media (max-width: 480px) {
   .game-container {
   width: 400px;
-  height: 550px;
+  height: 600px;
   position: relative;
   overflow: hidden;
   float: left;
@@ -230,7 +230,7 @@ font-size: 3rem;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  height: 550px;
+  height: 600px;
   width: 100px;
   background-color: white;
   top: -100px;
