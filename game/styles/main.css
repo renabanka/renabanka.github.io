@@ -206,7 +206,7 @@ font-size: 3rem;
   background-color: white;
   opacity: .75; 
   right: 8%;
-  top: -750px;
+  top: -700px;
   } 
 
 
@@ -233,7 +233,7 @@ font-size: 3rem;
   height: 630px;
   width: 100px;
   background-color: white;
-  top: -100px;
+  top: -80px;
   right:80%;
 }
 
@@ -247,7 +247,7 @@ font-size: 3rem;
 }
 
 .instructions {
-  top: auto;
+  top: 30px;
   right:8%;
   left:8%;
   width: auto;
@@ -260,7 +260,7 @@ font-size: 3rem;
 }
 
 .results {
-  top: 20px;
+  top: 30px;
   right:8%;
   left:8%;
   width: auto;
@@ -272,7 +272,7 @@ font-size: 3rem;
 }
 
 .gameover {
-  top: auto;
+  top: 30px;
   right:8%;
   left:8%;
   width: auto;
@@ -294,7 +294,7 @@ font-size: 3rem;
 
 #background {
   position: absolute;
-  top: 0;
+  top: 30px;
   left: 0;
   min-width: 100%;
   height: 550px;
