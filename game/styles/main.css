@@ -251,7 +251,7 @@ font-size: 3rem;
   right:8%;
   left:8%;
   width: auto;
-  height: 500px;
+  height: 100px;
   background: white;
   text-align: center;
   border-style: solid;
@@ -276,7 +276,7 @@ font-size: 3rem;
   right:8%;
   left:8%;
   width: auto;
-  height: 500px;
+  height: 100px;
   background: white;
   text-align: center;
   border-style: solid;
@@ -315,5 +315,11 @@ font-size: 3rem;
   top:28%;
   opacity: 1;
   visibility: hidden;
+}
+
+h2 {
+  font-size: 1rem;
+  text-align: center; 
+  font-family: 'Cormorant Garamond', serif;
 }
 
