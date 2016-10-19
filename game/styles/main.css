@@ -230,10 +230,10 @@ font-size: 3rem;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  height: 630px;
+  height: 650px;
   width: 100px;
   background-color: white;
-  top: -100px;
+  top: -90px;
   right:80%;
 }
 
