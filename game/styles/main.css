@@ -252,6 +252,8 @@ font-size: 3rem;
   left:8%;
   width: auto;
   height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: white;
   text-align: center;
   border-style: solid;
