@@ -206,7 +206,7 @@ font-size: 3rem;
   background-color: white;
   opacity: .75; 
   right: 8%;
-  top: -600px;
+  // top: -600px;
   } 
 
 
@@ -233,7 +233,7 @@ font-size: 3rem;
   height: 630px;
   width: 100px;
   background-color: white;
-  top: -50px;
+  // top: -100px;
   right:80%;
 }
 
