@@ -204,9 +204,9 @@ font-size: 3rem;
   overflow: hidden;
   float: left;
   background-color: white;
-  opacity: .50; 
+  // opacity: .75; 
   right: 9%;
-  top: -720px;
+  top: -740px;
   } 
 
 
