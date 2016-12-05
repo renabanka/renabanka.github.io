@@ -1,0 +1,191 @@
+body {
+  padding: 50px;
+  font: 14px 'Open Sans', sans-serif;
+  background-color: F7F7F7;
+}
+
+
+.row {
+    background-color: white;ç
+}
+
+.nav{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    width:100%;
+    height:60px;
+    background:#eee;
+    display:inline;
+    right: 8px;
+    position:absolute;
+    top:0;
+    transition:all ease-in-out 0.4s;
+    box-shadow:0 0 20px #bbb;
+
+}
+
+.nav li{
+    display:inline;
+}
+
+
+.nav a{
+    display:inline-block;
+    padding:20px;
+    text-decoration:none;
+    color: black;
+    font: 16px 'Open Sans', sans-serif;
+}
+
+h1 , h2 {
+    color: black;
+    display:inline;
+}
+
+nav a:hover {
+    color: black;
+    opacity: 1;
+    font: 20px 'Open Sans 800', sans-serif;
+
+}
+
+.intro {
+    width: 25rem;
+    float: left;
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    animation-duration:2s;
+    margin-left: 100px;
+}
+
+.intropic {
+    width: 25rem;
+    float: left;
+    margin-left: 250px;
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    animation-duration:2s;
+}
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    animation-duration:2s;
+}
+
+
+.small-button-style-outline .sqs-block-button .sqs-block-button-element--small {
+    color: #272727;
+}
+
+
+.row {
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+.row:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#lyricalprojectinfo {
+    padding: 50px 50px 50px 50px;
+    text-align: right;
+}
+
+#lyricalprojectinfo2 {
+    padding: 50px 50px 50px 50px;
+    text-align: left;
+}
+
+
+
+.projectdescription {
+    text-align:right;
+    margin-left: 10rem;
+}
+
+.projectdescription2 {
+    text-align:left;
+    margin-right: 10rem;
+}
+
+
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#RSVPphoto {
+    margin-left: -190px;
+}
+
+.sociallinks {
+    background-color: white;
+    width: 309px;
+    height: 150px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.sociallinks:hover {
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+.pictext {
+    padding: 15px;
+}
+
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
